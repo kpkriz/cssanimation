@@ -1,0 +1,108 @@
+*{
+	perspective: 600px;
+}
+
+body{
+	height: 100vh;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(45deg, #fbda61, #ff5abc);
+}
+
+.container{
+	width: 500px;
+	background: #f4f4f4;
+}
+
+.div1{
+	width: 250px;
+	height: 100px;
+	background: linear-gradient(black,silver);
+	border: 1px solid black;
+	box-shadow: -5px 0 10px rgba(0, 0, 0,0.7);
+
+	/*perspective: 600px;*/
+	perspective-origin: top;
+	padding: 10px;
+
+	position: relative;
+
+	margin: auto;
+}
+
+.div2{
+	width: 200px;
+	height: 100px;
+	background: linear-gradient(black,silver);
+	border: 1px solid black;
+	box-shadow: -5px 0 10px rgba(0, 0, 0,0.7);
+
+	transform: rotateX(45deg);
+
+	padding:50px;
+
+	position: absolute;
+	top:-100%;
+	left: -16px;
+
+	z-index: 1;
+}
+
+.door{
+	
+	position: relative;
+	left: 26%;
+	top: 10%;
+
+	/*perspective: 400px;*/
+	
+}
+
+.div4{
+	z-index: 2;
+	transform-origin: right;
+	transition: all 0.5s;
+}
+
+.div3{
+	z-index: 3;
+	transform-origin: left;
+	transition: all 0.5s;
+}
+
+.div3,.div4{
+	background: #fff;
+	width: 60px;
+	height:98px;
+	float: left;
+
+	border: 1px solid black;
+	box-shadow: -5px 0 10px rgba(0, 0, 0,0.7);
+
+
+}
+
+.div4{
+	transform: rotateY(60deg);
+}
+
+.div4:hover{
+	transform: rotateY(0deg);
+	/*transition-duration: 1s;*/
+}
+
+.div3:hover{
+	transform: rotateY(-45deg);
+	transform-origin: left;
+	/*transition-duration: 1s;*/	
+}
+
+
+
+
+
+
+
+
